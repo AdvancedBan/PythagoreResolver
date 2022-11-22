@@ -3,26 +3,66 @@ import sys
 import os
 from decimal import Decimal
 
+#PRESENT
 print("PYTHAGORE :")
+print("")
+print("1 : Enter 1 if you want to calculate the hypotenuse :")
+print("2 : Enter 2 if you want to calculate another length :")
+print("")
+print("")
 
-A = input("Enter the first long >> ")
-B = input("Enter the second length >> ")
+#CHOICE
+choice = input("Enter 1 or 2 >> ")
+print("")
 
-#CARRE
-a1 = Decimal(f'{A}')
-b1 = Decimal(f'{B}')
-result_a1 = a1*a1
-result_b1 = b1*b1
-print(result_a1)
-print(result_b1)
+if choice == '1':
 
-#HYPOTENUSE
-a2 = Decimal(f'{result_a1}')
-b2 = Decimal(f'{result_b1}')
-result_ab = a2+b2
+    #LONG
+    A = input("Enter the first long >> ")
+    B = input("Enter the second length >> ")
+    #CARRE
+    a1 = Decimal(f'{A}')
+    b1 = Decimal(f'{B}')
+    result_a1 = a1*a1
+    result_b1 = b1*b1
+    print(result_a1)
+    print(result_b1)
+    print("")
 
-#RACINE
-print(math.sqrt(result_ab))
+    #HYPOTENUSE
+    a2 = Decimal(f'{result_a1}')
+    b2 = Decimal(f'{result_b1}')
+    result_ab = a2+b2
+
+    #RACINE
+    result_1 = (math.sqrt(result_ab))
+    print("Result : ", result_1,"cm")
+
+    
+elif choice == '2':
+    #LONG
+    A = input("Enter the first long >> ")
+    B = input("Enter the second length >> ")
+    #CARRE
+    a1 = Decimal(f'{A}')
+    b1 = Decimal(f'{B}')
+    result_a1 = a1*a1
+    result_b1 = b1*b1
+    print(result_a1)
+    print(result_b1)
+    print("")
+
+    #HYPOTENUSE
+    a2 = Decimal(f'{result_a1}')
+    b2 = Decimal(f'{result_b1}')
+    result_ab = a2-b2
+
+    #RACINE
+    result_2 = (math.sqrt(result_ab))
+    print("Result : ", result_2,"cm")
+else:
+    print("The number you entered is not recognised !")
+
 
 #RESTART
 def restart_program():
